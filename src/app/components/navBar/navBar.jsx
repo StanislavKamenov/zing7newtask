@@ -5,7 +5,7 @@ import Logo from "../../../../public/Logo.png"
 import { CiMenuBurger } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
 
-export default function navBar() {
+export default function NavBar() {
     
     const [isNav, setIsNav] = useState(false);
 
@@ -13,9 +13,8 @@ export default function navBar() {
         setIsNav(prev => !prev)
     }
 
-
     return (
-        <header className= "max-w-[1440px] max-h-[10vh] lg:flex-row lg:justify-between">
+        <header className="max-w-[1440px] max-h-[10vh] lg:flex-row lg:justify-between">
             <nav>
                 <ul>
                     <div className="space-x-10 mt-[-2rem] mr-[25rem] font-semibold">
