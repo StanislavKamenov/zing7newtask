@@ -10,11 +10,17 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      screens: {
+        'max-lg': {'max': '1330px'}, // Custom breakpoint at 1330px
+      },
+      colors: {
+        "custom-blue": "#150050",
+      }
     },
   },
   plugins: [],
 };
+
 export default config;
