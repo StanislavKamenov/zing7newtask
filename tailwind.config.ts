@@ -17,6 +17,7 @@ const config: Config = {
       },
       colors: {
         "custom-blue": "#150050",
+        "custom-grey": "#404040",
       }
     },
   },
