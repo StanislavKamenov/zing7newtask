@@ -28,7 +28,7 @@ export default function NavBar() {
                 </ul>
                 <div className="space-x-10 fixed right-0 mt-[-2rem] mr-[20rem]">
                     <button className="font-extrabold transition duration-500 hover:text-blue-900">Log In</button>
-                    <button className="bg-custom-blue text-white w-[113px] h-[33px] rounded-tr-2xl font-extrabold transition duration-500 hover:text-teal-100">Try For Free</button>
+                    <button className="bg-custom-blue text-white w-[142px] h-[56px] border rounded-2xl font-extrabold transition duration-500 hover:text-teal-100">Try For Free</button>
                 </div>
                 <div className="fixed left-[calc(15%-0.5px)] top-14 transform translate-x-[-50%] translate-y-[10%]">
                     <Image src={Logo} alt="Logo" width={95} height={28} className="cursor-pointer" />
@@ -42,7 +42,7 @@ export default function NavBar() {
                     <Image src={Logo} alt="Logo" width={95} height={28} className="cursor-pointer lg:justify-between" />
                 </div>
                 <div className="space-x-16 fixed right-10 mt-[-5rem] mr-[0rem]">
-                    <button className="bg-custom-blue text-white w-[113px] h-[33px] rounded-tr-2xl font-extrabold transition duration-500 hover:text-teal-100">Try For Free</button>
+                    <button className="bg-custom-blue text-white w-[113px] h-[33px] border rounded-2xl font-extrabold transition duration-500 hover:text-teal-100">Try For Free</button>
                 </div>
             </nav>
 
