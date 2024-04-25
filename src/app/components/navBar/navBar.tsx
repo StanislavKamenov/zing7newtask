@@ -7,7 +7,7 @@ import { AiOutlineClose } from "react-icons/ai";
 
 export default function NavBar() {
     
-    const [isNav, setIsNav] = useState(true); 
+    const [isNav, setIsNav] = useState(false); 
 
     function handleClick() {
         setIsNav(prev => !prev)
@@ -48,8 +48,8 @@ export default function NavBar() {
 
             {/* MobileNav */}
             {isNav && 
-    <div className="bg-black/80 fixed w-full h-full z-10 top-0 left-0 flex justify-center items-center animate-fadeIn"> 
-        <AiOutlineClose onClick={handleClick} className="max-lg:flex visible text-black absolute ml-[14rem] top-0" size={32} />
+    <div className="bg-black/80 fixed w-full h-full z-10 top-0 lg:hidden left-0 flex justify-center items-center animate-fadeIn"> 
+        <AiOutlineClose onClick={handleClick} className="max-lg:flex lg:hidden visible text-black absolute ml-[14rem] top-0" size={32} />
         <div className="bg-white p-4 rounded-md w-full h-full flex justify-center items-center">
             <ul className="text-2xl flex flex-col">
                 <a href="" className="my-2">Product</a>
