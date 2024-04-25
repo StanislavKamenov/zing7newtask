@@ -13,7 +13,14 @@ const config: Config = {
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
-        'max-lg': {'max': '1330px'}, // Custom breakpoint at 1330px
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',    
+        'xl': '1280px',
+        '2xl': '1536px',
+        // 'max-lg': {'max': '1330px'}, 
+        // 'small': {'max': '375px'}, 
+        // 'average': {'max': '414px'},
       },
       colors: {
         "custom-blue": "#150050",

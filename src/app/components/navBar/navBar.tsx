@@ -7,7 +7,7 @@ import { AiOutlineClose } from "react-icons/ai";
 
 export default function NavBar() {
     
-    const [isNav, setIsNav] = useState(false); // Changed initial state to false
+    const [isNav, setIsNav] = useState(true); 
 
     function handleClick() {
         setIsNav(prev => !prev)
@@ -48,19 +48,21 @@ export default function NavBar() {
 
             {/* MobileNav */}
             {isNav && 
-             <div className="lg:hidden bg-black/80 fixed w-full h-full z-10 top-0 left-0 flex justify-center items-center animate-fadeIn"> 
-             <AiOutlineClose onClick={handleClick} className="max-lg:flex lg:hidden visible text-black absolute ml-[14rem] top-0" size={32} />
-             <div className="bg-white p-4 rounded-md w-full h-full flex justify-center items-center">
-                 <ul className="text-xl flex flex-col">
-                     <a href="">Product</a>
-                     <a href="">Pricing</a>
-                     <a href="">Company</a>
-                     <a href="">Resources</a>
-                     <a href="">Contact</a>
-                     <a>Log In</a>
-                 </ul>
-             </div>
-         </div>}
+    <div className="bg-black/80 fixed w-full h-full z-10 top-0 left-0 flex justify-center items-center animate-fadeIn"> 
+        <AiOutlineClose onClick={handleClick} className="max-lg:flex visible text-black absolute ml-[14rem] top-0" size={32} />
+        <div className="bg-white p-4 rounded-md w-full h-full flex justify-center items-center">
+            <ul className="text-2xl flex flex-col">
+                <a href="" className="my-2">Product</a>
+                <a href="" className="my-2">Pricing</a>
+                <a href="" className="my-2">Company</a>
+                <a href="" className="my-2">Resources</a>
+                <a href="" className="my-2">Contact</a>
+                <a className="my-2">Log In</a>
+            </ul>
+        </div>
+    </div>
+}
+
         </header>
     );
 }
