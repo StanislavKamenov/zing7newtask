@@ -13,56 +13,57 @@ export default function NavBar() {
         setIsNav(prev => !prev)
     }
 
+    const Menu = [
+      {title: 'Product', path: '/', id: '1'},
+      {title: 'Pricing', path: './pricing', id: '2'},
+      {title: 'Company', path: './company', id: '3'},
+      {title: 'Blog', path: './blog', id: '4'},
+      {title: 'Contact', path: './contact', id: '5'}
+    ]
+
     return (
-        <header className="max-w-[1440px] max-h-[10vh] xl:flex-row xl:justify-between">
-            {/* Desktop Nav */}
-            <nav className="hidden xl:flex">
-                <ul>
-                    <div className="fixed space-x-10 mt-[-2rem] ml-[-30rem] font-semibold">
-                        <a href="" className="transition duration-500 hover:text-blue-900">Product</a>
-                        <a href="" className="transition duration-500 hover:text-blue-900">Pricing</a>
-                        <a href="" className="transition duration-500 hover:text-blue-900">Company</a>
-                        <a href="" className="transition duration-500 hover:text-blue-900">Resources</a>
-                        <a href="" className="transition duration-500 hover:text-blue-900">Contact</a>
-                    </div>
-                </ul>
-                <div className="space-x-10 fixed right-0 mt-[-3rem] mr-[20rem]">
-                    <button className="font-extrabold transition duration-500 hover:text-blue-900">Log In</button>
-                    <button className="bg-custom-blue text-white w-[142px] h-[56px] border rounded-2xl font-extrabold transition duration-500 hover:text-teal-100">Try For Free</button>
-                </div>
-                <div className="fixed left-[calc(15%-0.5px)] top-14 transform translate-x-[-50%] translate-y-[10%]">
-                    <Image src={Logo} alt="Logo" width={95} height={28} className="cursor-pointer" />
-                </div>
-            </nav>
+        <header className="flex justify-between items-center max-h-[10vh] mx-auto px-4 xl:px-0 xl:pr-[50rem] mt-[-2rem]">
+            <div className="flex items-center space-x-4">
+                {/* Always visible logo */}
+                <Image src={Logo} alt="Company Logo" width={95} height={28}/>
+    
+                <div className="relative flex justify-center w-full">
+                    {/* Responsive Menu Button */}
+                    <button onClick={handleClick} className="text-xl xl:hidden">
+                        {isNav ? <AiOutlineClose /> : <CiMenuBurger />}
+                    </button>
 
-            {/* Mobile Nav */}
-            <nav className="xl:hidden">
-                <CiMenuBurger onClick={handleClick} className="visible text-black absolute left-4 top-4" size={32} />
-                <div className="visible text-black absolute space-x-1 left-12 top-5">
-                    <Image src={Logo} alt="Logo" width={95} height={28} className="cursor-pointer xl:justify-between" />
+                    {/* Dropdown Menu */}
+                    {isNav && (
+                        <div className="absolute left-1/2 transform -translate-x-1/2 mt-6 bg-white shadow-lg z-10">
+                            {Menu.map(data => (
+                                <div key={data.id} className="flex flex-col">
+                                    <a href={data.path} className="hover:text-gray-600 px-4 py-4">
+                                        {data.title}
+                                    </a>
+                                </div>
+                            ))}
+                            <div className="flex flex-col">
+                                <button className="hover:text-blue-900 px-4 py-4 font-extrabold transition duration-500">Log In</button>
+                                <button className="bg-custom-blue text-white w-full border rounded-2xl font-extrabold transition duration-500 hover:text-teal-100 py-4">Try For Free</button>
+                            </div>
+                        </div>
+                    )}
                 </div>
-                <div className="space-x-16 fixed right-10 mt-[-5rem] mr-[0rem]">
-                    <button className="bg-custom-blue text-white w-[113px] h-[33px] border rounded-2xl font-extrabold transition duration-500 hover:text-teal-100">Try For Free</button>
-                </div>
-            </nav>
-
-            {/* MobileNav */}
-            {isNav && 
-    <div className="bg-black/80 fixed w-full h-full z-10 top-0 xl:hidden left-0 flex justify-center items-center animate-fadeIn"> 
-        <AiOutlineClose onClick={handleClick} className="max-xl:flex xl:hidden visible text-black absolute ml-[14rem] top-0" size={32} />
-        <div className="bg-white p-4 rounded-md w-full h-full flex justify-center items-center">
-            <ul className="text-2xl flex flex-col">
-                <a href="" className="my-2">Product</a>
-                <a href="" className="my-2">Pricing</a>
-                <a href="" className="my-2">Company</a>
-                <a href="" className="my-2">Resources</a>
-                <a href="" className="my-2">Contact</a>
-                <a className="my-2">Log In</a>
-            </ul>
-        </div>
-    </div>
-}
-
+                
+                {/* Full-size navigation */}
+                <nav className="hidden xl:flex space-x-10 text-xl">
+                    {Menu.map(data => (
+                        <a key={data.id} href={data.path} className="hover:text-gray-600 ml-[5rem]">
+                            {data.title}
+                        </a>
+                    ))}
+                </nav>
+            </div>
+            <div className="hidden xl:flex space-x-10 fixed right-0 mr-[20rem]">
+                <button className="font-extrabold transition duration-500 hover:text-blue-900">Log In</button>
+                <button className="bg-custom-blue text-white w-[142px] h-[56px] border rounded-2xl font-extrabold transition duration-500 hover:text-teal-100">Try For Free</button>
+            </div>
         </header>
     );
 }
