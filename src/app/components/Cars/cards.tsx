@@ -30,7 +30,7 @@ export default function Cards() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col md:flex-row justify-center md:space-x-8 mt-8">
+            <div className="flex flex-col md:flex-row justify-center md:space-x-[7vw] mt-8">
                 <Card
                     isSelected={isCardSelected(1)}
                     handleClick={() => handleCardClick(1)}
