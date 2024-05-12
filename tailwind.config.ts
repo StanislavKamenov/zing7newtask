@@ -29,6 +29,7 @@ const config: Config = {
         "custom-grey": "#404040",
         "custom-black": "#000000",
         "custom-yellow": "#FFE377",
+        "custom-grey2": "#787878",
       }
     },
   },
