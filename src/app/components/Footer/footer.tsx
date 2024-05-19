@@ -7,43 +7,60 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <div className="w-[1440px] h-[561px] relative">
-            <div className="flex flex-col items-start mt-32">
-                <Image src={Logo} alt="Logo" />
-                <div className="w-[230px] mt-16">
-                    <span>We built an elegant solution. Our team created a fully integrated sales and marketing solution for SMBs</span>
+        <div className="w-full max-w-screen-xl mx-auto px-4 py-16">
+            <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mt-16 lg:mt-32">
+                <div className="flex flex-col items-center lg:items-start">
+                    <Image src={Logo} alt="Logo" />
+                    <div className="w-full lg:w-[230px] mt-8 lg:mt-16 text-center lg:text-left">
+                        <span>We built an elegant solution. Our team created a fully integrated sales and marketing solution for SMBs</span>
+                    </div>
+                    <div className="flex space-x-5 mt-6">
+                        <Image src={Facebook} alt="Facebook" />
+                        <Image src={Linkedin} alt="Linkedin" />
+                        <Image src={Twitter} alt="Twitter" />
+                    </div>
                 </div>
-                <div className="flex space-x-5 mt-6">
-                    <Image src={Facebook} alt="Facebook" />
-                    <Image src={Linkedin} alt="Linkedin" />
-                    <Image src={Twitter} alt="Twitter" />
+                <div className="flex flex-wrap justify-between mt-16 lg:mt-0 lg:ml-16 space-y-16 lg:space-y-0 lg:space-x-32">
+                    <div className="w-full sm:w-1/2 lg:w-auto flex flex-col items-center lg:items-start">
+                        <p className="font-bold">Company</p>
+                        <p>About</p>
+                        <p>Pricing</p>
+                        <p>Jobs</p>
+                        <p>Blog</p>
+                        <p>Careers</p>
+                    </div>
+                    <div className="w-full sm:w-1/2 lg:w-auto flex flex-col items-center lg:items-start">
+                        <p className="font-bold">Product</p>
+                        <p>Sales software</p>
+                        <p>Features</p>
+                        <p>Privacy</p>
+                        <p>Marketplace</p>
+                        <p>Status</p>
+                        <p>API</p>
+                    </div>
+                    <div className="w-full sm:w-1/2 lg:w-auto flex flex-col items-center lg:items-start">
+                        <p className="font-bold">Discover</p>
+                        <p>Partner Program</p>
+                        <p>Get our newsletter</p>
+                        <p>Sales Pipeline</p>
+                        <p>What is CRM?</p>
+                        <p>CRM Comparison</p>
+                        <p>Resources</p>
+                    </div>
+                    <div className="w-full sm:w-1/2 lg:w-auto flex flex-col items-center lg:items-start">
+                        <p className="font-bold">Help Center</p>
+                        <p>Community</p>
+                        <p>Knowledge Base</p>
+                        <p>Academy</p>
+                        <p>Support</p>
+                    </div>
                 </div>
             </div>
-            <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[73px] h-[202px] -ml-32 space-y-5">
-                <p className="font-bold -mt-32">Company</p>
-                <p>About</p>
-                <p>Pricing</p>
-                <p>Jobs</p>
-                <p>Blog</p>
-                <p>Careers</p>
-            </div>
-            <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[161px] h-[204px] ml-32 space-y-5">
-                <p className="font-bold -mt-32">Product</p>
-                <p>Sales software</p>
-                <p>Features</p>
-                <p>Privacy </p>
-                <p>Marketplace</p>
-                <p>Status</p>
-                <p>API</p>
-            </div>
-            <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[161px] h-[204px] space-y-5 ml-[19vw]">
-                <p className="font-bold -mt-32">Discover</p>
-                <p>Partner Program</p>
-                <p>Get our newsletter</p>
-                <p>Sales Pipeline  </p>
-                <p>What is CRM?</p>
-                <p>CRM Comparison</p>
-                <p>Resources</p>
+            <div className="flex flex-wrap justify-center space-x-4 sm:space-x-16 mt-16 lg:mt-32">
+                <p>© Copyright 2024</p>
+                <p>Terms of Service</p>
+                <p>Privacy Policy</p>
+                <p>Cookies</p>
             </div>
         </div>
     );

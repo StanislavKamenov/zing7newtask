@@ -7,6 +7,7 @@ import Sponsors from "./components/Sponsors/sponsors";
 import News from "./components/News/news";
 import Results from "./components/results/results";
 import Footer from "./components/Footer/footer";
+import Ready from "./components/Ready/ready";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -17,6 +18,7 @@ export default function Home() {
     <Sponsors />
     <News />
     <Results />
+    <Ready />
     <Footer />
     </main>
   );
