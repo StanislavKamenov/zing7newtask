@@ -20,7 +20,7 @@ export default function Cards() {
         <div className="bg-custom-blue mt-20 text-white md:mt-5 lg:mt-8 xl:mt-10 2xl:mt-12 w-full min-h-screen flex flex-col items-center justify-center p-4 relative">
             <div className="max-w-md md:max-w-lg lg:max-w-xl text-center md:text-left mb-8 mt-8 flex flex-col md:flex-row">
                 <div className="md:w-1/2 md:pr-4">
-                    <h1 className="text-2xl ml-[-8vw] md:text-3xl lg:text-4xl font-bold mt-4 md:mt-0">Here's how Roooby can benefit your business</h1>
+                    <h1 className="text-2xl ml-[-8vw] md:text-3xl lg:text-4xl font-bold mt-4 md:mt-0">Here&apos;s how Roooby can benefit your business</h1>
                 </div>
                 <div className="md:w-1/2 md:pl-4">
                     <div className="max-w-sm">
@@ -52,7 +52,6 @@ export default function Cards() {
                     title="Grow without growing pains"
                     description="Our software is powerful enough to handle the most complex business, yet flexible enough to scale with you as you grow."
                 />
-
             </div>
         </div>
     );
