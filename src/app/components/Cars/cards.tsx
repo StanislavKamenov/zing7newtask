@@ -25,7 +25,7 @@ export default function Cards() {
                 <div className="md:w-1/2 md:pl-4">
                     <div className="max-w-sm">
                         <p className="mt-4">
-                            Build more meaningful and lasting relationships — better understand their needs, identify new opportunities to help, address any problems faster.
+                            Build more meaningful and lasting relationships &ldquo; better understand their needs, identify new opportunities to help, address any problems faster.
                         </p>
                     </div>
                 </div>
